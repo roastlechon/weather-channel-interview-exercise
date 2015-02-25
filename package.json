@@ -8,4 +8,8 @@
     "url": "https://roastlechon@bitbucket.org/roastlechon/weather-channel-interview-exercise.git"
   },
   "author": "Noel Madali",
+  "devDependencies": {
+    "express": "^4.12.0",
+    "gulp-sass": "^1.3.3"
+  }
 }
