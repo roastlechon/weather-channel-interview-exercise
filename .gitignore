@@ -33,3 +33,10 @@ node_modules
 # Debug log from npm
 npm-debug.log
 
+
+#####=== Bower ===#####
+
+# Bower dependency directory
+bower_components
+
+#####=== Misc ===#####
