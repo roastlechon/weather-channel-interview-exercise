@@ -1,0 +1,17 @@
+// define breakpoint sizes by 
+$tiny: 320px; // 20em
+$narrow: 768px; // 48em
+$medium: 960px; //60em
+$wide: 1120px; // 70em
+
+// import mixins
+@import 'mixins';
+
+.wc-story {
+	
+	@include breakpoint('wide') {
+		float: left;
+		width: 25%;
+	}
+
+}
