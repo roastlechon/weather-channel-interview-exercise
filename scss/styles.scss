@@ -7,11 +7,28 @@ $wide: 1120px; // 70em
 // import mixins
 @import 'mixins';
 
+.container {
+	
+	// default to 15px margin
+	margin: 0 15px 0;
+	
+	// on wider screens, make margin bigger to take up more space
+	@include breakpoint('wide') {
+		margin: 0 60px 0;
+	}
+}
+
+.wc-story-container {
+	// reset margin to align header tag
+	margin: 0 -15px;
+}
+
 .wc-story {
 	
 	@include breakpoint('wide') {
 		float: left;
-		width: 25%;
+		width: 30%;
+		padding: 0 15px;
 	}
 
 }
