@@ -51,7 +51,7 @@ gulp.task('dev', ['scss', 'copy:html', 'copy:css'], function () {
 });
 
 // watch files
-gulp.task('watch', ['dev'], function () {
+gulp.task('watch', ['dev', 'express'], function () {
 	gulp.watch('scss/*', ['scss']);
 	gulp.watch('html/*', ['copy:html']);
 });
