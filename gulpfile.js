@@ -8,6 +8,9 @@ var wcConfig = {
 	assets: {
 		css: [
 			'bower_components/normalize.css/normalize.css'
+		],
+		html: [
+			'html/index.html'
 		]
 	}
 };
@@ -30,14 +33,25 @@ gulp.task('copy:css', function () {
 		.pipe(gulp.dest('dist/css'));
 });
 
+gulp.task('copy:html', function () {
+	gulp.src(wcConfig.assets.html)
+		.pipe(gulp.dest('dist'));
+});
+
 // start static web server
 gulp.task('express', function () {
 	var app = express();
-	app.use(express.static(__dirname));
+	app.use(express.static(__dirname + '/dist'));
 	app.listen(4000);
 });
 
-// watch scss files
-gulp.task('watch', function () {
+// dev task
+gulp.task('dev', ['scss', 'copy:html', 'copy:css'], function () {
+
+});
+
+// watch files
+gulp.task('watch', ['dev'], function () {
 	gulp.watch('scss/*', ['scss']);
+	gulp.watch('html/*', ['copy:html']);
 });
