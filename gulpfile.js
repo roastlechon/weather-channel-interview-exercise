@@ -1,12 +1,18 @@
 var gulp = require('gulp');
+var del = require('del');
 var sass = require('gulp-sass');
 var express = require('express');
+
+// clean dist
+gulp.task('clean', function (cb) {
+	del('dist', cb);
+});
 
 // compile scss
 gulp.task('scss', function () {
 	gulp.src('scss/styles.scss')
 		.pipe(sass())
-		.pipe(gulp.dest('.'));
+		.pipe(gulp.dest('dist/css'));
 });
 
 // start static web server
@@ -18,6 +24,5 @@ gulp.task('express', function () {
 
 // watch scss files
 gulp.task('watch', function () {
-	gulp.watch('scss/*', ['scss'])
-		.pipe(gulp.dest('.'));
+	gulp.watch('scss/*', ['scss']);
 });

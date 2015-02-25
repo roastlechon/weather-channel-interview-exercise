@@ -40,3 +40,6 @@ npm-debug.log
 bower_components
 
 #####=== Misc ===#####
+
+# Application specific items are here
+dist

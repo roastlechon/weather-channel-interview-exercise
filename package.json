@@ -9,6 +9,7 @@
   },
   "author": "Noel Madali",
   "devDependencies": {
+    "del": "^1.1.1",
     "express": "^4.12.0",
     "gulp-sass": "^1.3.3"
   }
