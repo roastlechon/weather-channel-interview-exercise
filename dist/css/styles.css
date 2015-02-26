@@ -1,0 +1,64 @@
+/**
+ * Pass in a string and return a media query wrapping
+ * the style block
+ * 
+ * @param  {[type]} $breakpoint [description]
+ * @return {[type]}             [description]
+ */
+body {
+  margin: 0;
+  background: #cacaca;
+  line-height: 1.4em; }
+
+.container {
+  margin: 0 15px; }
+
+.wc-story-container {
+  overflow: hidden;
+  *zoom: 1;
+  margin: 0 -15px; }
+
+.wc-story {
+  padding: 0 15px;
+  margin-bottom: 20px; }
+  @media (min-width: 1120px) {
+    .wc-story {
+      float: left;
+      width: 320px; } }
+  @media (min-width: 1440px) {
+    .wc-story {
+      float: left;
+      width: 425px; } }
+  @media (min-width: 1600px) {
+    .wc-story.wc-story--large {
+      width: 640px; } }
+
+.wc-story__block {
+  overflow: hidden;
+  *zoom: 1;
+  background: #fafafa;
+  background: -moz-linear-gradient(top, #cccccc 0%, #ffffff 100%);
+  background: -webkit-linear-gradient(top, #cccccc 0%, #ffffff 100%);
+  background: -o-linear-gradient(top, #cccccc 0%, #ffffff 100%);
+  background: -ms-linear-gradient(top, #cccccc 0%, #ffffff 100%);
+  background: linear-gradient(to bottom, #cccccc 0%, #ffffff 100%);
+  border: 1px solid #999999; }
+  .wc-story__block .block__content {
+    word-break: break-word; }
+    @media (min-width: 320px) {
+      .wc-story__block .block__content {
+        padding: 0 20px 20px; } }
+    @media (min-width: 960px) {
+      .wc-story__block .block__content {
+        padding: 0 10px 10px; } }
+    .wc-story__block .block__content ol li {
+      margin-bottom: 10px; }
+
+.img-responsive {
+  margin: 0 auto;
+  display: block;
+  max-width: 100%;
+  height: auto; }
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important; }

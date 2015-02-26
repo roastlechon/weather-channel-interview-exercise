@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html lang="en" ng-app="wcie">
+<head>
+	<title>{{index.pageTitle}}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body ng-controller="wcie.IndexCtrl as index" style="background: {{index.pageColor}};">
+
+<div class="container">
+	
+	<h1 ng-cloak>{{index.pageTitle}}</h1>
+
+	<div class="wc-story-container">
+		<section class="wc-story" id="main">
+			<div class="wc-story__block">
+				<img class="img-responsive" src="http://dsx.weather.com/util/image/w/68a62f4e-122e-4c72-91b2-ec9f5024e031.jpg?v=at&w=320&h=180&api=7db9fe61-7414-47b5-9871-e17d87b8b6a0" srcset="http://dsx.weather.com/util/image/w/68a62f4e-122e-4c72-91b2-ec9f5024e031.jpg?api=7db9fe61-7414-47b5-9871-e17d87b8b6a0&h=598&w=640&v=at 2x, http://dsx.weather.com/util/image/w/68a62f4e-122e-4c72-91b2-ec9f5024e031.jpg?v=at&w=320&h=180&api=7db9fe61-7414-47b5-9871-e17d87b8b6a0 1x">
+				<div class="block__content">
+					<h2>Bacon ipsum dolor amet short loin meatloaf spare ribs sausage.</h2>
+					<p>Bresaola ball tip meatloaf, jerky brisket pancetta picanha pig biltong pork belly. Leberkas alcatra sausage venison shoulder shank tri-tip landjaeger porchetta. Ham bresaola short ribs chuck. Ball tip pork chop frankfurter doner turkey, porchetta pork belly.</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="wc-story" id="sidebar">
+			<div class="wc-story__block">
+				<div class="block__content">
+					<h2>Angular directive to change the background color.</h2>
+					<p>Short loin pork chop turducken ham hock swine ground round bresaola venison pig frankfurter cow meatloaf t-bone picanha brisket. Chicken alcatra chuck, andouille pork belly jowl ribeye.</p>
+					<wcie-button wcie-page-title="index.pageTitle" wcie-page-color="index.pageColor" wcie-area-button-display="index.areaOfButton"></wcie-button>
+					<p>What is the area of the button?</p>
+					<p ng-if="index.areaOfButton">{{index.areaOfButton}}</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="wc-story" id="sidebar">
+			<div class="wc-story__block">
+				<div class="block__content">
+					<h2>Shankle sausage pancetta</h2>
+					<p>Short loin pork chop turducken ham hock swine ground round bresaola venison pig frankfurter cow meatloaf t-bone picanha brisket. Chicken alcatra chuck, andouille pork belly jowl ribeye.</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="wc-story wc-story--large" id="instruction">
+			<div class="wc-story__block">
+				<div class="block__content">
+					<h2>Instructions</h2>
+					<ol>
+						<li>
+							Using RWD (Responsive Web Design) techniques and the compass breakpoint mixin, 
+							show the sections vertically (one above the other) if the display is a handheld or tablet device, 
+							but side-by-side with equal widths for desktop user agents.
+							<p><b>Note:</b> Made the last column larger to take advantage of screen sizes 1600px and up.</p>
+						</li>
+						<li>
+							Using SASS write a cross browser gradient mixin and use it to apply different gradients to each section.
+						</li>
+						<li>
+							Use http://dsx.weather.com/util/image/w/68a62f4e-122e-4c72-91b2-ec9f5024e031.jpg?api=7db9fe61-7414-47b5-9871-e17d87b8b6a0&h=598&w=640&v=at 
+							as the image if the device viewing the page is a Retina display.
+						</li>
+						<li>
+							Set this page up as an Angular app. Manually initialize the app before the closing body tag.
+						</li>
+						<li>
+							Create an angular directive with an interactive element that makes a simple change to the the presentation. For example, click a button and change the background color. Load the directive template from $templateCache. Feel free to be creative or even silly.
+						</li>
+						<li>
+							* Bonus question: Create a factory and use it in your directive to calculate the area of the directive element. Display the result of the calculation.
+						</li>
+					</ol>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
+<script type="text/javascript" src="js/angular.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
