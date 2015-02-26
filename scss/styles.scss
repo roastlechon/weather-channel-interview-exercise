@@ -80,3 +80,8 @@ body {
 	max-width: 100%;
 	height: auto;
 }
+
+// angular stuff
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}

@@ -1,16 +1,16 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="en" ng-app="wcie">
 <head>
-	<title>Basic Document</title>
+	<title>{{index.pageTitle}}</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
-<body ng-app="wcie">
+<body ng-controller="wcie.IndexCtrl as index" style="background: {{index.pageColor}};">
 
 <div class="container">
 	
-	<h1>Basic Document</h1>
+	<h1 ng-cloak>{{index.pageTitle}}</h1>
 
 	<div class="wc-story-container">
 		<section class="wc-story" id="main">
@@ -28,7 +28,9 @@
 				<div class="block__content">
 					<h2>Angular directive to change the background color.</h2>
 					<p>Short loin pork chop turducken ham hock swine ground round bresaola venison pig frankfurter cow meatloaf t-bone picanha brisket. Chicken alcatra chuck, andouille pork belly jowl ribeye.</p>
-					<button type="button" ng-click=""></button>
+					<wcie-button wcie-page-title="index.pageTitle" wcie-page-color="index.pageColor" wcie-area-button-display="index.areaOfButton"></wcie-button>
+					<p>What is the area of the button?</p>
+					<p ng-if="index.areaOfButton">{{index.areaOfButton}}</p>
 				</div>
 			</div>
 		</section>
@@ -75,6 +77,7 @@
 		</section>
 	</div>
 </div>
+<script type="text/javascript" src="js/angular.js"></script>
 <script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
