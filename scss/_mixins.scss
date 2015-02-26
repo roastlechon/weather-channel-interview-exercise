@@ -1,4 +1,3 @@
-
 /**
  * Pass in a string and return a media query wrapping
  * the style block
@@ -23,5 +22,22 @@
 		@media (min-width: $wide) {
 			@content;
 		}
+	} @else if $breakpoint == 'wider' {
+		@media (min-width: $wider) {
+			@content;
+		}	
+	} @else if $breakpoint == 'reallywide' {
+		@media (min-width: $reallywide) {
+			@content;
+		}
 	}
+}
+
+@mixin background-gradient($background, $top, $bottom) {
+	background: $background;
+	background: -moz-linear-gradient(top, $top 0%, $bottom 100%); 
+	background: -webkit-linear-gradient(top, $top 0%, $bottom 100%); 
+	background: -o-linear-gradient(top, $top 0%, $bottom 100%); 
+	background: -ms-linear-gradient(top, $top 0%, $bottom 100%); 
+	background: linear-gradient(to bottom, $top 0%, $bottom 100%); 	
 }
