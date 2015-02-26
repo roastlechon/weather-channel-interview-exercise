@@ -7,6 +7,9 @@
     "type": "git",
     "url": "https://roastlechon@bitbucket.org/roastlechon/weather-channel-interview-exercise.git"
   },
+  "scripts": {
+    "start": "node index.js"
+  },
   "author": "Noel Madali",
   "devDependencies": {
     "del": "^1.1.1",
